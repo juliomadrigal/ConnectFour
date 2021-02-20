@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c2833"
+    tools:context=".GameOverActivity">
+
+    <TextView
+        android:id="@+id/winnertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Winner is: "
+        android:textColor="#FFF"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/winnername"
+        app:layout_constraintEnd_toEndOf="@+id/winnername"
+        app:layout_constraintStart_toStartOf="@+id/winnername"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/winnername"
+        android:layout_width="411dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="44dp"
+        android:text="Winner Goes Here"
+        android:textColor="#FF69B4"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/playagain"
+        app:layout_constraintEnd_toEndOf="@+id/winnertext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/winnertext"
+        app:layout_constraintTop_toBottomOf="@+id/winnertext" />
+
+    <Button
+        android:id="@+id/playagain"
+        android:layout_width="137dp"
+        android:layout_height="38dp"
+        android:text="Play Again?"
+        app:layout_constraintBottom_toTopOf="@+id/selecttext"
+        app:layout_constraintEnd_toEndOf="@+id/winnername"
+        app:layout_constraintStart_toStartOf="@+id/winnername"
+        app:layout_constraintTop_toBottomOf="@+id/winnername" />
+
+    <EditText
+        android:id="@+id/selecttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter a Player to Search"
+        android:inputType="textPersonName"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/searchresult"
+        app:layout_constraintEnd_toEndOf="@+id/playagain"
+        app:layout_constraintStart_toStartOf="@+id/playagain"
+        app:layout_constraintTop_toBottomOf="@+id/playagain" />
+
+    <TextView
+        android:id="@+id/searchresult"
+        android:layout_width="391dp"
+        android:layout_height="32dp"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/selectbutton"
+        app:layout_constraintEnd_toEndOf="@+id/selecttext"
+        app:layout_constraintStart_toStartOf="@+id/selecttext"
+        app:layout_constraintTop_toBottomOf="@+id/selecttext" />
+
+    <Button
+        android:id="@+id/selectbutton"
+        android:layout_width="141dp"
+        android:layout_height="37dp"
+        android:text="Search Player"
+        app:layout_constraintEnd_toEndOf="@+id/searchresult"
+        app:layout_constraintStart_toStartOf="@+id/searchresult"
+        app:layout_constraintTop_toBottomOf="@+id/searchresult" />
+
+    <TextView
+        android:id="@+id/topplayer"
+        android:layout_width="387dp"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        android:text="Top 5 Players: "
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="378dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintEnd_toEndOf="@+id/topplayer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/topplayer"
+        app:layout_constraintTop_toBottomOf="@+id/selectbutton">
+
+        <TextView
+            android:id="@+id/playerlist"
+            android:layout_width="377dp"
+            android:layout_height="332dp"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="#FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
